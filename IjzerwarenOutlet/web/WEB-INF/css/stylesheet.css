@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21-okt-2014, 13:44:16
+    Author     : Deva
+*/
+.myTableForm td{
+    width: 200px;
+       border: solid 5px white;
+}
+
+.myTableForm tr{
+        margin-top: 3px;
+}
+
+.footer {
+    clear:both;
+    position:fixed;
+    bottom:0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+#container {
+    padding-top: 60px;
+    width:98%;
+    margin: auto;
+}
+
+#content {
+    width:79%;
+    float:left;
+}
+
+#sidebar {
+    width:20%;
+    float:right;
+}
+
+.container{
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+}
+
+.container .text-muted{
+    margin: 20px 0;
+}

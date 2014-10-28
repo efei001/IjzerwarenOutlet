@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>IJzerwarenOutlet | Home</title>
+        <title>IJzerwarenOutlet | Contact</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -18,11 +18,10 @@
             <!-- Start of content -->
             <div id="content" class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Home</h3>
+                    <h3 class="panel-title">Contact</h3>
                 </div>
                 <div  class="panel-body">
-                    <h1>Welkom bij IJzenwarenOutlet</h1>
-                    <p>Bedankt voor uw bezoek!</p>
+                 Wij zijn momenteel niet te contacteren
                 </div>
             </div>
             <!-- End of content -->

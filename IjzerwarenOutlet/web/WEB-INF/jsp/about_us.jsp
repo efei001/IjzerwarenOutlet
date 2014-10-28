@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>IJzerwarenOutlet | Home</title>
+        <title>IJzerwarenOutlet | About us</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -18,11 +18,12 @@
             <!-- Start of content -->
             <div id="content" class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Home</h3>
+                    <h3 class="panel-title">About us</h3>
                 </div>
                 <div  class="panel-body">
-                    <h1>Welkom bij IJzenwarenOutlet</h1>
-                    <p>Bedankt voor uw bezoek!</p>
+                    <img src="img/logo.jpg">
+                    <h2>IJzenwaren Outlet</h2>
+                    <p> Hier worden ijzerwaren waar een beperkte voorraad van is aangeboden voor een superscherp tarief </p>
                 </div>
             </div>
             <!-- End of content -->
