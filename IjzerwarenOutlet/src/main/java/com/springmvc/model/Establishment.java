@@ -48,8 +48,8 @@ public class Establishment {
         return streetNumber;
     }
 
-    public void setStreetNumber(int houseNumber) {
-        this.streetNumber = houseNumber;
+    public void setStreetNumber(int streetNumber) {
+        this.streetNumber = streetNumber;
     }
 
     public String getName() {
@@ -59,4 +59,54 @@ public class Establishment {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getStreetName() {
+        return streetName;
+    }
+
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
+    }
+
+    public String getStreetNumberSuffix() {
+        return streetNumberSuffix;
+    }
+
+    public void setStreetNumberSuffix(String streetNumberSuffix) {
+        this.streetNumberSuffix = streetNumberSuffix;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public ProductEstablishment getProductEstablishment() {
+        return productEstablishment;
+    }
+
+    public void setProductEstablishment(ProductEstablishment productEstablishment) {
+        this.productEstablishment = productEstablishment;
+    }
+    
+    
 }

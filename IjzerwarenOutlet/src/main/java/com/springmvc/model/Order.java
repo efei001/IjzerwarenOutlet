@@ -8,6 +8,7 @@ package com.springmvc.model;
 
 import java.util.Calendar;
 import java.io.Serializable;
+import java.util.TimeZone;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -30,17 +31,20 @@ public class Order implements Serializable {
     private User user;
     @ManyToOne
     private ProductEstablishment productEstablishment;
+    
+    /*the TimeZone is no attribute for the order but is needed to get the current date.*/    
+    private TimeZone tz = TimeZone.getTimeZone("Europe/Amsterdam");
 
     public Order() {
     }
 
-    public Order(User user, int id, int amount, float totalPrice, float shippingCosts, Calendar date, ProductEstablishment productEstablishment) {
+    public Order(User user, int id, int amount, float totalPrice, float shippingCosts, ProductEstablishment productEstablishment) {
         this.user = user;
         this.id = id;
         this.amount = amount;
         this.totalPrice = totalPrice;
         this.shippingCosts = shippingCosts;
-        this.date = date;
+        date = Calendar.getInstance(tz);
         this.productEstablishment = productEstablishment;
     }
 
@@ -88,8 +92,8 @@ public class Order implements Serializable {
         return date;
     }
 
-    public void setDate(Calendar date) {
-        this.date = date;
+    public void setDate() {
+        date = Calendar.getInstance(tz);
     }
 
     public ProductEstablishment getProductEstablishment() {
