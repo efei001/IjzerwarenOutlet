@@ -2,7 +2,6 @@ package com.springmvc.service;
 
 import com.springmvc.dao.UserDAO;
 import com.springmvc.model.User;
-import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,9 +28,6 @@ public class UserService {
 
     public void deleteUser(int id) {
         userDAO.deleteUser(id);
-    }
-     public void deleteRole(int id) {
-        userDAO.deleteRole(id);
     }
 
     public List<User> getUsers() {

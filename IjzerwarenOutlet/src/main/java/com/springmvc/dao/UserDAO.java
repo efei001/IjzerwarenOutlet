@@ -22,12 +22,16 @@ public class UserDAO {
     }
 
     public void updateUser(User user) {
-        User userToUpdate = getUser(user.getUserId());
-        userToUpdate.setName(user.getName());
-        userToUpdate.setStreetAddress(user.getStreetAddress());
+        User userToUpdate = getUser(user.getId());
+        userToUpdate.setFirstName(user.getFirstName());
+        userToUpdate.setLastName(user.getLastName());
+        userToUpdate.setEmail(user.getEmail());
+        userToUpdate.setStreetName(user.getStreetName());
         userToUpdate.setHouseNumber(user.getHouseNumber());
+        userToUpdate.setStreetNumberSuffix(user.getStreetNumberSuffix());
+        userToUpdate.setPostalCode(user.getPostalCode());
         userToUpdate.setCity(user.getCity());
-        userToUpdate.setRole(user.getRole());
+        userToUpdate.setPhoneNumber(user.getPhoneNumber());
         
         getCurrentSession().update(userToUpdate);
 
@@ -43,14 +47,6 @@ public class UserDAO {
         if (user != null) {
             getCurrentSession().delete(user);
         }
-    }
-    
-    public void deleteRole(int id) {
-        User userToUpdate = getUser(id);
-        userToUpdate.setRole(null);
-        getCurrentSession().update(userToUpdate);
-            
-           
     }
 
     @SuppressWarnings("unchecked")

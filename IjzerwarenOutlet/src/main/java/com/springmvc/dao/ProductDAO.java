@@ -25,9 +25,12 @@ public class ProductDAO {
         Product productToUpdate = getProduct(product.getId());
         productToUpdate.setName(product.getName());
         productToUpdate.setPrice(product.getPrice());
-        productToUpdate.setLocation(product.getLocation());
-        productToUpdate.setWeight(product.getWeight());
         productToUpdate.setDescription(product.getDescription());
+        productToUpdate.setAdditionDescription(product.getAdditionDescription());
+        productToUpdate.setDiscountPercentage(product.getDiscountPercentage());
+        productToUpdate.setAddition(product.isAddition());
+        productToUpdate.setStihoArticle(product.getStihoArticle());
+        
         getCurrentSession().update(productToUpdate);
     }
 
