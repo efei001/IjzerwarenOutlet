@@ -1,3 +1,9 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package com.springmvc.dao;
 
 import org.hibernate.Session;
@@ -22,16 +28,12 @@ public class UserDAO {
     }
 
     public void updateUser(User user) {
-        User userToUpdate = getUser(user.getId());
-        userToUpdate.setFirstName(user.getFirstName());
-        userToUpdate.setLastName(user.getLastName());
-        userToUpdate.setEmail(user.getEmail());
-        userToUpdate.setStreetName(user.getStreetName());
+        User userToUpdate = getUser(user.getUserId());
+        userToUpdate.setName(user.getName());
+        userToUpdate.setStreetAddress(user.getStreetAddress());
         userToUpdate.setHouseNumber(user.getHouseNumber());
-        userToUpdate.setStreetNumberSuffix(user.getStreetNumberSuffix());
-        userToUpdate.setPostalCode(user.getPostalCode());
         userToUpdate.setCity(user.getCity());
-        userToUpdate.setPhoneNumber(user.getPhoneNumber());
+        userToUpdate.setRole(user.getRole());
         
         getCurrentSession().update(userToUpdate);
 
@@ -47,6 +49,14 @@ public class UserDAO {
         if (user != null) {
             getCurrentSession().delete(user);
         }
+    }
+    
+    public void deleteRole(int id) {
+        User userToUpdate = getUser(id);
+        userToUpdate.setRole(null);
+        getCurrentSession().update(userToUpdate);
+            
+           
     }
 
     @SuppressWarnings("unchecked")

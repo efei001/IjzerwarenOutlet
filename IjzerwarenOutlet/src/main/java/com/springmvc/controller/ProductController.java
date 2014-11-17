@@ -50,29 +50,29 @@ public class ProductController {
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public ModelAndView productAdd(@ModelAttribute("product") @Valid Product product) throws IOException {
 
-//        if (product.getName().isEmpty() && product.getWeight().isEmpty() && product.getDescription().isEmpty()) {
-//            return new ModelAndView("productAdd").addObject("error", "Name is empty!").addObject("error2", "Weight is empty!").addObject("error3", "Description is empty!");
-//        }
-//
-//        if (product.getName().isEmpty() && product.getWeight().isEmpty()) {
-//            return new ModelAndView("productAdd").addObject("error", "Name is empty!").addObject("error2", "Weight is empty!");
-//        }
-//
-//        if (product.getName().isEmpty()) {
-//            return new ModelAndView("productAdd").addObject("error", "Name is empty!");
-//        }
-//
-//        if (product.getWeight().isEmpty() && product.getDescription().isEmpty()) {
-//            return new ModelAndView("productAdd").addObject("error2", "Weight is empty!").addObject("error3", "Description is empty!");
-//        }
-//
-//        if (product.getWeight().isEmpty()) {
-//            return new ModelAndView("productAdd").addObject("error2", "Weight is empty!");
-//        }
-//
-//        if (product.getDescription().isEmpty()) {
-//            return new ModelAndView("productAdd").addObject("error3", "Description is empty!");
-//        }
+        if (product.getName().isEmpty() && product.getWeight().isEmpty() && product.getDescription().isEmpty()) {
+            return new ModelAndView("productAdd").addObject("error", "Name is empty!").addObject("error2", "Weight is empty!").addObject("error3", "Description is empty!");
+        }
+
+        if (product.getName().isEmpty() && product.getWeight().isEmpty()) {
+            return new ModelAndView("productAdd").addObject("error", "Name is empty!").addObject("error2", "Weight is empty!");
+        }
+
+        if (product.getName().isEmpty()) {
+            return new ModelAndView("productAdd").addObject("error", "Name is empty!");
+        }
+
+        if (product.getWeight().isEmpty() && product.getDescription().isEmpty()) {
+            return new ModelAndView("productAdd").addObject("error2", "Weight is empty!").addObject("error3", "Description is empty!");
+        }
+
+        if (product.getWeight().isEmpty()) {
+            return new ModelAndView("productAdd").addObject("error2", "Weight is empty!");
+        }
+
+        if (product.getDescription().isEmpty()) {
+            return new ModelAndView("productAdd").addObject("error3", "Description is empty!");
+        }
         
 
         ModelAndView productListView = new ModelAndView("productList");

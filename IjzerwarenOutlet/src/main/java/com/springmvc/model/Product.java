@@ -8,11 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-/**
- *
- * @author Jaron
- */
-
 @Entity
 public class Product implements Serializable {
 
@@ -24,23 +19,23 @@ public class Product implements Serializable {
     private String name;
     private double price;
     @Size(min=2, message="Error")
-    private String description, additionDescription ;
-    private int discountPercentage;
-    private boolean addition;
-    private StihoArticle stihoArticle;
+    private String location;
+    @Size(min=2, message="Error")
+    private String weight;
+    @Size(min=2, message="Error")
+    private String description;
+    
+    
 
-    public Product(int id, String name, double price, String description, String additionDescription, int discountPercentage, boolean addition, StihoArticle stihoArticle) {
+    public Product(int id, String name, double price, String location, String weight, String description) {
         this.id = id;
         this.name = name;
         this.price = price;
+        this.location = location;
+        this.weight = weight;
         this.description = description;
-        this.additionDescription = additionDescription;
-        this.discountPercentage = discountPercentage;
-        this.addition = addition;
-        this.stihoArticle = stihoArticle;
     }
-    
-    
+
     public Product() {
     }
 
@@ -56,6 +51,7 @@ public class Product implements Serializable {
         return name;
     }
 
+
     public void setName(String name) {
         this.name = name;
     }
@@ -68,6 +64,22 @@ public class Product implements Serializable {
         this.price = price;
     }
 
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -76,36 +88,6 @@ public class Product implements Serializable {
         this.description = description;
     }
 
-    public String getAdditionDescription() {
-        return additionDescription;
-    }
-
-    public void setAdditionDescription(String additionDescription) {
-        this.additionDescription = additionDescription;
-    }
-
-    public int getDiscountPercentage() {
-        return discountPercentage;
-    }
-
-    public void setDiscountPercentage(int discountPercentage) {
-        this.discountPercentage = discountPercentage;
-    }
-
-    public boolean isAddition() {
-        return addition;
-    }
-
-    public void setAddition(boolean addition) {
-        this.addition = addition;
-    }
-
-    public StihoArticle getStihoArticle() {
-        return stihoArticle;
-    }
-
-    public void setStihoArticle(StihoArticle stihoArticle) {
-        this.stihoArticle = stihoArticle;
-    }
+   
 
 }
